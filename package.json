@@ -1,0 +1,40 @@
+{
+	"name": "agnostic",
+	"version": "1.0.0",
+	"description": "We don't care where you come from. We just want you to join us",
+	"main": "index.js",
+	"scripts": {
+		"api-start": "npm run start --prefix api",
+		"client-start": "npm start --prefix client",
+		"start": "concurrently \"npm run api-start\" \"npm run client-start\"",
+		"api-lint": "npm run lint --prefix api",
+		"client-lint": "npm run lint --prefix client",
+		"lint": "concurrently \"npm run api-lint\" \"npm run client-lint\"",
+		"api-lint:fix": "npm run lint:fix --prefix api",
+		"client-lint:fix": "npm run lint:fix --prefix client",
+		"lint:fix": "concurrently \"npm run api-lint:fix\" \"npm run client-lint:fix\"",
+		"prepare": "husky install"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/JesseETI/Agnostic.git"
+	},
+	"keywords": [
+		"agnostic",
+		"social media app"
+	],
+	"author": "JesseETI",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/JesseETI/Agnostic/issues"
+	},
+	"homepage": "https://github.com/JesseETI/Agnostic#readme",
+	"devDependencies": {
+		"concurrently": "^7.0.0",
+		"husky": "^7.0.4",
+		"lint-staged": "^12.1.7"
+	},
+	"lint-staged": {
+		"*.{js, jsx}": "npm run lint:fix"
+	}
+}

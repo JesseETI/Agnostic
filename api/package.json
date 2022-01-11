@@ -1,0 +1,32 @@
+{
+	"name": "api",
+	"version": "1.0.0",
+	"description": "The backend for Agnostic social media application.",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"lint": "eslint **/*.js",
+		"lint:fix": "eslint **/*.js --fix",
+		"start": "nodemon index.js"
+	},
+	"author": "JesseETI",
+	"license": "ISC",
+	"dependencies": {
+		"bcrypt": "^5.0.1",
+		"cors": "^2.8.5",
+		"dotenv": "^10.0.0",
+		"express": "^4.17.2",
+		"mongoose": "^6.1.5",
+		"morgan": "^1.10.0",
+		"nodemon": "^2.0.15",
+		"passport": "^0.5.2"
+	},
+	"devDependencies": {
+		"eslint": "^8.6.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-plugin-import": "^2.25.4",
+		"eslint-plugin-prettier": "^4.0.0",
+		"prettier": "^2.5.1"
+	}
+}
