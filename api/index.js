@@ -10,7 +10,6 @@ import PostRouter from "./routes/post.js";
 import UserRouter from "./routes/user.js";
 
 const app = express();
-const port = 9000;
 
 dotenv.config();
 app.use(express.json());
@@ -22,6 +21,8 @@ app.use(
 		credentials: true,
 	})
 );
+
+const port = process.env.PORT || 9000;
 
 app.get("/", (req, res) => {
 	res.send("Hello World!");

@@ -7,10 +7,10 @@
 	"scripts": {
 		"lint": "eslint **/*.js",
 		"lint:fix": "eslint **/*.js --fix",
-		"start": "nodemon index.js"
+		"start": "if [$NODE_ENV == 'production']; then node index.js; else nodemon index.js; fi"
 	},
 	"author": "JesseETI",
-	"license": "ISC",
+	"license": "MIT",
 	"dependencies": {
 		"bcrypt": "^5.0.1",
 		"cors": "^2.8.5",
@@ -28,5 +28,8 @@
 		"eslint-plugin-import": "^2.25.4",
 		"eslint-plugin-prettier": "^4.0.0",
 		"prettier": "^2.5.1"
+	},
+	"engines": {
+		"node": "16.x"
 	}
 }
